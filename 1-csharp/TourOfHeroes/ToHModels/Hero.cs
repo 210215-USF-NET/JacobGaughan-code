@@ -38,5 +38,7 @@ namespace ToHModels
         public Element ElementType { get; set; }
 
         public SuperPower SuperPower { get; set; }
+
+        public override string ToString() => $"Hero Details: \n\t Name: {this.HeroName} \n\t SuperPower: {this.SuperPower.Name} \n\t Type: {this.ElementType}";
     }
 }
