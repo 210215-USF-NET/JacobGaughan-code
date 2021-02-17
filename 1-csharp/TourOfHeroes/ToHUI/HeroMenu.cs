@@ -71,8 +71,8 @@ namespace ToHUI
             Console.WriteLine("Set the element type of the hero: ");
             newHero.ElementType = Enum.Parse<Element>(Console.ReadLine());
             
-            Console.WriteLine("Hero Successfully created!");
             _heroBL.AddHero(newHero);
+            Console.WriteLine("Hero Successfully created!");
         }
 
         public void GetHeroes(){

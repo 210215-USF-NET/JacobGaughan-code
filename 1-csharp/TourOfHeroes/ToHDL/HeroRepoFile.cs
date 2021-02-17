@@ -12,9 +12,9 @@ namespace ToHDL
         private string filePath = "./ToHDL/HeroFiles.json";
         public Hero AddHero(Hero newHero)
         {
-            List<Hero> heroesFromFile = GetHeroes();
-            heroesFromFile.Add(newHero);
-            jsonString = JsonSerializer.Serialize(heroesFromFile);
+            List<Hero> herosFromFile = GetHeroes();
+            herosFromFile.Add(newHero);
+            jsonString = JsonSerializer.Serialize(herosFromFile);
             File.WriteAllText(filePath, jsonString);
             return newHero;
         }
@@ -25,7 +25,7 @@ namespace ToHDL
             {
                 jsonString = File.ReadAllText(filePath);
             }
-            catch(Exception)
+            catch (Exception)
             {
                 return new List<Hero>();
             }
