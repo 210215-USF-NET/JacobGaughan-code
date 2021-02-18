@@ -87,7 +87,7 @@ namespace ToHUI
         }
 
         public void ExitRemarks(){
-            Console.WriteLine("Goodbye Friend! I will watch your heros while you are away! :)");
+            Console.WriteLine("Goodbye Friend! :)");
         }
     }
 }
