@@ -7,11 +7,21 @@ namespace SerilogDemo
     {
         static void Main()
         {
-            
+            //log to console
             Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Verbose()
-                .WriteTo.File("logs/Logs.json")
+                .WriteTo.Console()
                 .CreateLogger();
+
+            //log to File
+            // Log.Logger = new LoggerConfiguration()
+            //     .WriteTo.File("logs/Logs.json")
+            //     .CreateLogger();
+            
+            //change minimum level 
+            // Log.Logger = new LoggerConfiguration()
+            //     .MinimumLevel.Verbose()
+            //     .WriteTo.File("logs/Logs.json")
+            //     .CreateLogger();
 
             Log.Verbose("Verbose log message");
             Log.Debug("Debug log message");
