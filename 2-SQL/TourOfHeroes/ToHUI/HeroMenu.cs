@@ -15,13 +15,13 @@ namespace ToHUI
             Boolean stay = true;
             do
             {
-                //menu options
-                Console.WriteLine("Welcome to the tour of heroes app!  What would you like to do?");
+                //menu options part
+                Console.WriteLine("Welcome to my tour of heroes app! What would you like to do?");
                 Console.WriteLine("[0] Create a hero");
                 Console.WriteLine("[1] Get all heroes");
-                Console.WriteLine("[2] Exit");
+                Console.WriteLine("[2] Exit.");
 
-                //user input
+                //get user input
                 Console.WriteLine("Enter a number: ");
                 string userInput = Console.ReadLine();
 
@@ -32,9 +32,9 @@ namespace ToHUI
                         {
                             CreateHero();
                         }
-                        catch(Exception)
+                        catch (Exception e)
                         {
-                            Console.WriteLine("Invalid Input.");
+                            Console.WriteLine("invalid input." + e.Message);
                             continue;
                         }
                         break;
@@ -46,13 +46,13 @@ namespace ToHUI
                         ExitRemarks();
                         break;
                     default:
-                        Console.WriteLine("Not part of menu!!! Try again!!! >:(");
+                        Console.WriteLine("Invalid input! Not part of menu options! >:[");
                         break;
                 }
             } while (stay);
         }
-
-        public void CreateHero(){
+        public void CreateHero()
+        {
             // Create hero method/logic
             Hero newHero = new Hero();
             Console.WriteLine("Enter Hero Name: ");
@@ -61,33 +61,34 @@ namespace ToHUI
             newHero.HP = int.Parse(Console.ReadLine());
             Console.WriteLine("Enter SuperPower details");
             SuperPower newSuperPower = new SuperPower();
-            Console.WriteLine("Enter SuperPower name: ");
+            Console.WriteLine("Enter SuperPower name:");
             newSuperPower.Name = Console.ReadLine();
-            Console.WriteLine("Enter SuperPower description: ");
+            Console.WriteLine("Enter SuperPower description");
             newSuperPower.Description = Console.ReadLine();
-            Console.WriteLine("Enter SuperPower damage: ");
+            Console.WriteLine("Enter SuperPower damage");
             newSuperPower.Damage = int.Parse(Console.ReadLine());
             newHero.SuperPower = newSuperPower;
-            Console.WriteLine("Set the element type of the hero: ");
+            Console.WriteLine("Set the element of the hero: ");
             newHero.ElementType = Enum.Parse<Element>(Console.ReadLine());
-            
-            _heroBL.AddHero(newHero);
-            Console.WriteLine("Hero Successfully created!");
-        }
 
-        public void GetHeroes(){
-            //gets all heros
+            _heroBL.AddHero(newHero);
+            Console.WriteLine("Hero Succesfully created!");
+
+        }
+        public void GetHeroes()
+        {
             foreach (var item in _heroBL.GetHeroes())
             {
                 Console.WriteLine(item.ToString());
             }
-            //pause
             Console.WriteLine("Press any key to continue");
             Console.ReadLine();
+
         }
 
-        public void ExitRemarks(){
-            Console.WriteLine("Goodbye Friend! :)");
+        public void ExitRemarks()
+        {
+            Console.WriteLine("Goodbye friend! See you next time!");
         }
     }
 }
