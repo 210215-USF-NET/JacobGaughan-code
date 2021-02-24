@@ -536,4 +536,4 @@ obj/
 
 #ignore appsettings for privacy
 
-**/*/appsettings.json
+**/appsettings.json
