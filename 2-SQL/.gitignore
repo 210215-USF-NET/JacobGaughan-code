@@ -535,4 +535,5 @@ obj/
 # End of https://www.toptal.com/developers/gitignore/api/vscode,csharp,vs,dotnetcore
 
 #ignore appsettings for privacy
-./TourOfHeroes/ToHUI/appsettings.json
+
+**/*/appsettings.json
