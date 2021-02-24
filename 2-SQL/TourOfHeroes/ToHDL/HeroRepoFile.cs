@@ -3,13 +3,12 @@ using ToHModels;
 using System.IO;
 using System.Text.Json;
 using System;
-
 namespace ToHDL
 {
     public class HeroRepoFile : IHeroRepository
     {
         private string jsonString;
-        private string filePath = "../ToHDL/HeroFiles.json";
+        private string filePath = "./ToHDL/HeroFiles.json";
         public Hero AddHero(Hero newHero)
         {
             List<Hero> herosFromFile = GetHeroes();
