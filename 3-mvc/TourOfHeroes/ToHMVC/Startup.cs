@@ -11,7 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ToHDL;
 
-namespace ToHMVC
+namespace ToHMVC2
 {
     public class Startup
     {

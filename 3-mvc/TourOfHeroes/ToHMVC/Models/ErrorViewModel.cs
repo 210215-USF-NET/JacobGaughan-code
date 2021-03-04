@@ -1,6 +1,6 @@
 using System;
 
-namespace ToHMVC.Models
+namespace ToHMVC2.Models
 {
     public class ErrorViewModel
     {
