@@ -1,0 +1,13 @@
+.csstalk, .pseudo{
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+#id{
+    color: #9ea187;
+}
+.pseudo:hover{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: azure;
+}
+#pel::first-letter{
+    font-size: x-large;
+}

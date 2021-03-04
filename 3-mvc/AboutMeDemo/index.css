@@ -1,0 +1,24 @@
+body{
+    background-color: #353535;
+    background: linear-gradient(to bottom, #353535 50%, #5e5e5e 100%);
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+}
+h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h4{
+    color: rgb(184, 184, 255);
+}
+a{
+    color: #b32c3b;
+}
+a:hover{
+    font-size: 1.1rem;
+    color: #e9374c;
+}
+a>img:hover{
+    transition: all 5s;
+    transform: scale(2.5);
+}
