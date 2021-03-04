@@ -18,6 +18,16 @@ namespace ToHDL
             return newHero;
         }
 
+        public Hero DeleteHero(Hero hero2BDeleted)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Hero GetHeroByName(string name)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Hero> GetHeroes()
         {
             try
@@ -29,6 +39,11 @@ namespace ToHDL
                 return new List<Hero>();
             }
             return JsonSerializer.Deserialize<List<Hero>>(jsonString);
+        }
+
+        public void UpdateHero(Hero hero2BUpdated)
+        {
+            throw new NotImplementedException();
         }
     }
 }

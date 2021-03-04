@@ -13,5 +13,20 @@ namespace ToHDL
             Storage.AllHeroes.Add(newHero);
             return newHero;
         }
+
+        public Hero GetHeroByName(string name)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Hero DeleteHero(Hero hero2BDeleted)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void UpdateHero(Hero hero2BUpdated)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
