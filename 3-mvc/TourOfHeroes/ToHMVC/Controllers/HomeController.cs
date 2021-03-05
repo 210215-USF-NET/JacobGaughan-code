@@ -5,9 +5,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using ToHMVC2.Models;
+using ToHMVC.Models;
 
-namespace ToHMVC2.Controllers
+namespace ToHMVC.Controllers
 {
     public class HomeController : Controller
     {
