@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Favorites";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="container">
+    <a asp-area="" asp-controller="Home" asp-action="Index">Go back home</a>
+    <div class="container p-3">
+        <h3>
+            Favorite Things
+        </h3>
+        <div class="container">
+            <h4>Favorite Anime</h4>
+            <ol class="list-items">
+                <li>Seven Deadly Sins</li>
+                <li>Demon Slayer</li>
+                <li>Death Note</li>
+            </ol>
+            <h4>Favorite Video Games</h4>
+            <ol class="list-items">
+                <li>Rocket League</li>
+                <li>Minecraft</li>
+                <li>Valorant</li>
+            </ol>
+        </div>
+    </div>
+</div>
