@@ -25,3 +25,10 @@ steps:
     publishWebProjects: false
     zipAfterPublish: true
     projects: '**/docker-practice/AboutMeMVC/*.csproj'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(931dba99-7940-4c8c-8afe-a546b1eb2345)'
+    appType: 'webApp'
+    WebAppName: 'training-practice'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
