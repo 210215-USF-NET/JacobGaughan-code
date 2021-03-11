@@ -15,10 +15,20 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'training-practice'
+    organization: '210215-usf-net'
+    scannerMode: 'MSBuild'
+    projectKey: '210215-USF-NET_JacobGaughan-code'
+    projectName: 'JacobGaughan-code'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
     projects: '**/docker-practice/*.sln'
+- task: SonarCloudAnalyze@1
+  displayName: pusblish code analysis
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
