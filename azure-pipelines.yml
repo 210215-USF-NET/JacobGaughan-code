@@ -27,8 +27,14 @@ steps:
   inputs:
     command: 'build'
     projects: '**/docker-practice/*.sln'
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
 - task: SonarCloudAnalyze@1
   displayName: pusblish code analysis
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
