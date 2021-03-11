@@ -21,7 +21,5 @@ steps:
     projects: '**/docker-practice/*.sln'
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'publish'
-    publishWebProjects: false
-    zipAfterPublish: true
+    command: 'build'
     projects: '**/docker-practice/AboutMeMVC/*.csproj'
