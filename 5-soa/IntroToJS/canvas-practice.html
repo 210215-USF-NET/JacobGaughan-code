@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Practice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+        integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="site.css">
+</head>
+
+<body onload="init()">
+    <div class="container mx-auto">
+        <canvas class="mx-auto border border-dark mt-4" id="mapCanvas" width="1000" height="800"></canvas>
+        <p><img id="mapOutput" width="1200" height="800" style="display: none;" /></p>
+        <div class="d-flex">
+            <div class="color-box border border-dark mx-1 my-auto" style="background:green;" id="green" onclick="color(this)">
+            </div>
+            <div class="color-box border border-dark mx-1 my-auto" style="background:blue;" id="blue" onclick="color(this)">
+            </div>
+            <div class="color-box border border-dark mx-1 my-auto" style="background:red;" id="red" onclick="color(this)"></div>
+            <div class="color-box border border-dark mx-1 my-auto" style="background:yellow;" id="yellow" onclick="color(this)">
+            </div>
+            <div class="color-box border border-dark mx-1 my-auto" style="background:orange;" id="orange" onclick="color(this)">
+            </div>
+            <div class="color-box border border-dark mx-1 my-auto" style="background:black;" id="black" onclick="color(this)">
+            </div>
+            <div class="color-box border border-dark mx-1 my-auto" style="background:white;" id="white" onclick="color(this)">
+            </div>
+            <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+            <label class="btn btn-primary mx-2" for="file" style="cursor: pointer;">Upload Image</label>
+            <a class="btn btn-success mx-2" id="download-map" onclick="saveFile()">Save Map</a>
+            <input class="btn btn-dark mx-2" type="button" value="Clear" id="clr" onclick="erase()">
+        </div>
+    </div>
+
+    <div>
+        <img class="mx-auto border border-dark mt-4" id="canvasimg" style="display: none;" width="1000" height="800">
+    </div>
+    <script type="text/javascript" src="canvasMap.js"></script>
+</body>
+
+</html>
