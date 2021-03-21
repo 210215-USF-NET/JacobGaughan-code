@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice rolling</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+        integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="site.css">
+</head>
+
+<body>
+    <h1 class="text-center">DICE ROLLING TESTING </h1>
+    <div class="d-flex container mx-auto py-4">
+        <img class="dnd-dice" src="/img/dnd-dice-20.png" alt="DND-dice" onclick="rollDice()" style="width: 70px; cursor: pointer;">
+
+        <button class="btn btn-dark" onclick="rollDice()">Roll Dice</button>
+        <p class="h3 ml-2">
+            Size of dice: <input class="dice-value ml-2" type="number" value="20">
+        </p>
+
+        <p class="h2 ml-2">
+            You rolled: <span class="dice-roll-output"></span>
+        </p>
+    </div>
+    <script type="text/javascript" src="dice-roll.js"></script>
+</body>
+
+</html>
