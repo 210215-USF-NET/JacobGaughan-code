@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Practice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
+        integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="site.css">
+</head>
+
+<body style="padding: 3%;">
+    <!-- TESTING FIVES AND THREES ONLY -->
+    <div>
+        <h1>
+            Fives and Threes Only
+        </h1>
+
+        <p>
+            Write a function that mimics the following described arithmetic operations.
+        </p>
+
+        <p>
+            Starting with either 3 or 5 and given these operations:
+            <br>
+            add 5
+            <br>
+            multiply by 3
+            <br>
+            You should say if it is possible to reach the target number n.
+        </p>
+
+        <h2>
+            Examples
+        </h2>
+
+        <p>
+            only5and3(14) ➞ true
+            <br>
+            // 14 = 3*3 + 5
+        </p>
+
+        <p>
+            only5and3(25) ➞ true
+            <br>
+            // 25 = 5+5+5+5+5
+        </p>
+
+        <p>
+            only5and3(7) ➞ false
+            <br>
+            // There exists no path to the target number 7
+        </p>
+
+        <input id="only5And3Input" type="number">
+        <button onclick="testOnly5And3()">Test Only 3 And 5</button>
+
+        <h3 class="result" id="only5And3Result"></h3>
+    </div>
+
+    <!-- TESTING RECURSION: CASE AND INDEX INVERTER -->
+    <div style="padding-top: 4rem;">
+        <h1>
+            Recursion: Case and Index Inverter
+        </h1>
+
+        <p>
+            Write a recursive function that takes a string input and returns the string in a reversed case and order.
+        </p>
+
+        <h2>
+            Examples
+        </h2>
+
+        <p>
+            invert("dLROW YM sI SihT") ➞ "tHIs iS my worlD"
+        </p>
+
+        <p>
+            invert("ytInIUgAsnOc") ➞ "CoNSaGuiNiTY"
+        </p>
+
+        <p>
+            invert("step on NO PETS") ➞ "step on NO PETS"
+        </p>
+
+        <p>
+            invert("XeLPMoC YTiReTXeD") ➞ "dExtErIty cOmplEx"
+        </p>
+
+        <input id="invertStringInput" type="text">
+        <button onclick="testInvertString()">Invert String</button>
+
+        <h3 class="result" id="invertStringResult"></h3>
+    </div>
+
+
+    <script type="text/javascript" src="practice.js"></script>
+</body>
+
+</html>
